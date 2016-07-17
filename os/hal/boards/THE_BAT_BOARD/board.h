@@ -38,10 +38,10 @@
 #define STM32_LSEDRV                (3U << 11U)
 
 #if !defined(STM32_HSECLK)
-#define STM32_HSECLK                0U
+#define STM32_HSECLK                16000000U
 #endif
 
-#define STM32_HSE_BYPASS
+/* #define STM32_HSE_BYPASS */
 
 /*
  * MCU type as defined in the ST header.
@@ -869,8 +869,8 @@
 
 /* PORT H */
 #define VAL_GPIOH_MODER ( \
-    PIN_MODE_ANALOG(0) | \
-    PIN_MODE_ANALOG(1) | \
+    PIN_MODE_INPUT(0) | \
+    PIN_MODE_INPUT(1) | \
     PIN_MODE_ANALOG(2) | \
     PIN_MODE_ANALOG(3) | \
     PIN_MODE_ANALOG(4) | \
@@ -905,8 +905,8 @@
     PIN_OTYPE_PUSHPULL(15))
 
 #define VAL_GPIOH_OSPEEDR ( \
-    PIN_OSPEED_LOW(0) | \
-    PIN_OSPEED_LOW(1) | \
+    PIN_OSPEED_HIGH(0) | \
+    PIN_OSPEED_HIGH(1) | \
     PIN_OSPEED_LOW(2) | \
     PIN_OSPEED_LOW(3) | \
     PIN_OSPEED_LOW(4) | \
